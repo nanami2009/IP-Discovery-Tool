@@ -1,5 +1,4 @@
 # Nat_python
-Sure! Here's a sample README file in English for your Python script:
 
 ---
 
