@@ -1,4 +1,3 @@
-好的，我会将描述改为一个开发版本的说明。以下是更新后的内容：
 
 ---
 
@@ -99,4 +98,3 @@ For any questions or suggestions, please open an issue or contact the repository
 
 ---
 
-希望这对你有帮助！如果你有任何其他问题或需要进一步的帮助，请告诉我。
