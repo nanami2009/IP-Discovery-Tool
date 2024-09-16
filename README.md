@@ -1,48 +1,46 @@
-# Nat_python
+好的，我会将描述改为一个开发版本的说明。以下是更新后的内容：
 
 ---
 
-# Public and Private IP Address Checker
+# Nat_python
+## Public and Private IP Address Checker
 
-This Python script allows you to check your public and private IP addresses, as well as determine your NAT type using the STUN protocol. The script supports output in both Chinese (zh-cn) and English (en-us).
+This Python script allows you to check your public and private IP addresses, as well as determine your NAT type using the STUN protocol. The script supports output in multiple languages, including Chinese (中文), English, French (Français), Russian (Русский), and Spanish (Español).
 
-## Features
-
+### Features
 - Retrieve public IP address
 - Retrieve private IP address
 - Determine NAT type, external IP address, and external port
-- Support for output in Chinese and English
+- Support for output in multiple languages
 
-## Requirements
-
+### Requirements
 - Python 3.x
 - `requests` library
 - `stun` library
 
-## Installation
+### Installation
+Install the required libraries:
 
-1. Install the required libraries:
-    ```sh
-    pip install requests
-    pip install stun
-    ```
-
-2. Download or clone this repository.
-
-## Usage
-
-1. Run the script:
-    ```sh
-    python main.py
-    ```
-
-2. When prompted, choose the output language by entering `zh-cn` for Chinese or `en-us` for English.
-
-## Example Output
-
-### Chinese (zh-cn)
+```bash
+pip install requests
+pip install stun
 ```
-请选择输出语言 (zh-cn/en-us): zh-cn
+
+Download or clone this repository.
+
+### Usage
+Run the script:
+
+```bash
+python main.py
+```
+
+When prompted, choose the output language by entering the corresponding language name (e.g., 中文 for Chinese, English for English).
+
+### Example Output
+#### Chinese (中文)
+```plaintext
+请选择输出语言（中文/English/Français/Русский/Español）： 中文
 公网IP地址: 203.0.113.1
 私网IP地址: 192.168.1.2
 NAT类型: Full Cone NAT
@@ -50,9 +48,9 @@ NAT类型: Full Cone NAT
 外部端口: 54321
 ```
 
-### English (en-us)
-```
-请选择输出语言 (zh-cn/en-us): en-us
+#### English
+```plaintext
+Please choose the output language (中文/English/Français/Русский/Español): English
 Public IP Address: 203.0.113.1
 Private IP Address: 192.168.1.2
 NAT Type: Full Cone NAT
@@ -60,17 +58,45 @@ External IP Address: 203.0.113.1
 External Port: 54321
 ```
 
-## License
+#### French (Français)
+```plaintext
+Veuillez choisir la langue de sortie (中文/English/Français/Русский/Español): Français
+Adresse IP publique : 203.0.113.1
+Adresse IP privée : 192.168.1.2
+Type de NAT : Full Cone NAT
+Adresse IP externe : 203.0.113.1
+Port externe : 54321
+```
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+#### Russian (Русский)
+```plaintext
+Пожалуйста, выберите язык вывода (中文/English/Français/Русский/Español): Русский
+Публичный IP-адрес: 203.0.113.1
+Частный IP-адрес: 192.168.1.2
+Тип NAT: Full Cone NAT
+Внешний IP-адрес: 203.0.113.1
+Внешний порт: 54321
+```
 
-## Contributing
+#### Spanish (Español)
+```plaintext
+Por favor, elija el idioma de salida (中文/English/Français/Русский/Español): Español
+Dirección IP pública: 203.0.113.1
+Dirección IP privada: 192.168.1.2
+Tipo de NAT: Full Cone NAT
+Dirección IP externa: 203.0.113.1
+Puerto externo: 54321
+```
 
+### License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+### Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Contact
-
+### Contact
 For any questions or suggestions, please open an issue or contact the repository owner.
 
 ---
 
+希望这对你有帮助！如果你有任何其他问题或需要进一步的帮助，请告诉我。
