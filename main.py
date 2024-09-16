@@ -38,27 +38,48 @@ def get_nat_type():
 
 if __name__ == '__main__':
     # 让用户选择输出语言
-    language = input("请选择输出语言 (zh-cn/en-us): ").strip().lower()
+    language = input("请选择输出语言（1.中文/2.English/3.Français/4.Русский/5.Español): ").strip().lower()
 
     # 获取并打印公网IP地址
     public_ip = get_public_ip()
     private_ip = get_private_ip()
     nat_type, external_ip, external_port = get_nat_type()
 
-    if language == 'zh-cn':
+    if language == '1':
         # 输出中文结果
         print(f"公网IP地址: {public_ip}")
         print(f"私网IP地址: {private_ip}")
         print(f"NAT类型: {nat_type}")
         print(f"外部IP地址: {external_ip}")
         print(f"外部端口: {external_port}")
-    elif language == 'en-us':
+    elif language == '2':
         # 输出英文结果
         print(f"Public IP Address: {public_ip}")
         print(f"Private IP Address: {private_ip}")
         print(f"NAT Type: {nat_type}")
         print(f"External IP Address: {external_ip}")
         print(f"External Port: {external_port}")
+    elif language == '3':
+        # 输出法文结果
+        print(f"Adresse IP publique : {public_ip}")
+        print(f"Adresse IP privée : {private_ip}")
+        print(f"Type de NAT : {nat_type}")
+        print(f"Adresse IP externe : {external_ip}")
+        print(f"Port externe : {external_port}")
+    elif language == '4':
+        # 输出俄文结果
+        print(f"Публичный IP-адрес: {public_ip}")
+        print(f"Частный IP-адрес: {private_ip}")
+        print(f"Тип NAT: {nat_type}")
+        print(f"Внешний IP-адрес: {external_ip}")
+        print(f"Внешний порт: {external_port}")
+    elif language == '5':
+        # 输出西班牙文结果
+        print(f"Dirección IP pública: {public_ip}")
+        print(f"Dirección IP privada: {private_ip}")
+        print(f"Tipo de NAT: {nat_type}")
+        print(f"Dirección IP externa: {external_ip}")
+        print(f"Puerto externo: {external_port}")
     else:
         # 无效的语言选择
         print("Invalid language selection. Please choose 'zh-cn' or 'en-us'.")
