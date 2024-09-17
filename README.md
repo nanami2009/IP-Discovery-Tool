@@ -1,6 +1,6 @@
 ---
 
-# Nat_python
+#NAT-Tool
 ## Public and Private IP Address Checker
 
 This Python script allows you to check your public and private IP addresses, as well as determine your NAT type using the STUN protocol. The script supports output in multiple languages, including Chinese (中文), English, French (Français), Russian (Русский), and Spanish (Español).
