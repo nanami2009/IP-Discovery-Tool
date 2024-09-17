@@ -15,7 +15,7 @@ def get_public_ip():
 # 获取私网IP地址
 def get_private_ip():
     try:
-        # 创建一个UDP socket连接到Google的DNS服务器
+        # 创建一个UDP socket连接到阿里的DNS服务器
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.connect(('223.5.5.5', 80))
         # 获取本地IP地址
