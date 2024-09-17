@@ -38,52 +38,52 @@ When prompted, choose the output language by entering the corresponding language
 ### Example Output
 #### Chinese (中文)
 ```plaintext
-请选择输出语言（中文/English/Français/Русский/Español）： 中文
-公网IP地址: 203.0.113.1
-私网IP地址: 192.168.1.2
-NAT类型: Full Cone NAT
-外部IP地址: 203.0.113.1
-外部端口: 54321
+公网ipv4地址: 114.5.1.4
+私网ipv4地址: 172.20.10.3
+NAT类型: Symmetric NAT
+外部ipv4地址: 114.5.1.4
+外部端口: 55118
+ipv6地址: ['fe80::536a:b1e3:9889:271a', 'fe80::363d:afab:9e28:b7c6', 'fe80::f1c1:1b00:889c:66b0', 'fe80::2873:dac0:9870:a240', '2001:0:2841:fcb0:2873:dac0:9870:a240']
 ```
 
 #### English
 ```plaintext
-Please choose the output language (中文/English/Français/Русский/Español): English
-Public IP Address: 203.0.113.1
-Private IP Address: 192.168.1.2
-NAT Type: Full Cone NAT
-External IP Address: 203.0.113.1
-External Port: 54321
+Public ipv4 Address: 115.192.45.67
+Private ipv4 Address: 172.20.10.3
+NAT Type: Symmetric NAT
+External ipv4 Address: 115.192.45.67
+External Port: 55152
+IPv6 Address: ['fe80::536a:b1e3:9889:271a', 'fe80::363d:afab:9e28:b7c6', 'fe80::f1c1:1b00:889c:66b0', 'fe80::2873:dac0:9870:a240', '240e:0db8:85a3:0000:0000:8a2e:0370:7336']
 ```
 
 #### French (Français)
 ```plaintext
-Veuillez choisir la langue de sortie (中文/English/Français/Русский/Español): Français
-Adresse IP publique : 203.0.113.1
-Adresse IP privée : 192.168.1.2
-Type de NAT : Full Cone NAT
-Adresse IP externe : 203.0.113.1
-Port externe : 54321
+Adresse ipv4 publique : 115.192.45.67
+Adresse ipv4 privée : 172.20.10.3
+Type de NAT : Symmetric NAT
+Adresse ipv4 externe : 115.192.45.67
+Port externe : 55155
+Adresse IPv6: ['fe80::536a:b1e3:9889:271a', 'fe80::363d:afab:9e28:b7c6', 'fe80::f1c1:1b00:889c:66b0', 'fe80::2873:dac0:9870:a240', '240e:0db8:85a3:0000:0000:8a2e:0370:7336']
 ```
 
 #### Russian (Русский)
 ```plaintext
-Пожалуйста, выберите язык вывода (中文/English/Français/Русский/Español): Русский
-Публичный IP-адрес: 203.0.113.1
-Частный IP-адрес: 192.168.1.2
-Тип NAT: Full Cone NAT
-Внешний IP-адрес: 203.0.113.1
-Внешний порт: 54321
+Публичный ipv4-адрес: 115.192.45.67
+Частный ipv4-адрес: 172.20.10.3
+Тип NAT: Symmetric NAT
+Внешний ipv4-адрес: 115.192.45.67
+Внешний порт: 55155
+IPv6 адрес: ['fe80::536a:b1e3:9889:271a', 'fe80::363d:afab:9e28:b7c6', 'fe80::f1c1:1b00:889c:66b0', 'fe80::2873:dac0:9870:a240', '240e:0db8:85a3:0000:0000:8a2e:0370:7336']
 ```
 
 #### Spanish (Español)
 ```plaintext
-Por favor, elija el idioma de salida (中文/English/Français/Русский/Español): Español
-Dirección IP pública: 203.0.113.1
-Dirección IP privada: 192.168.1.2
-Tipo de NAT: Full Cone NAT
-Dirección IP externa: 203.0.113.1
-Puerto externo: 54321
+Dirección ipv4 pública: 115.192.45.67
+Dirección ipv4 privada: 172.20.10.3
+Tipo de NAT: Symmetric NAT
+Dirección ipv4 externa: 115.192.45.67
+Puerto externo: 55155
+Dirección IPv6: ['fe80::536a:b1e3:9889:271a', 'fe80::363d:afab:9e28:b7c6', 'fe80::f1c1:1b00:889c:66b0', 'fe80::2873:dac0:9870:a240', '240e:0db8:85a3:0000:0000:8a2e:0370:7336']
 ```
 
 ### License
