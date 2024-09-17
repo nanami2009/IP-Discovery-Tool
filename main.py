@@ -17,7 +17,7 @@ def get_private_ip():
     try:
         # 创建一个UDP socket连接到Google的DNS服务器
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.connect(('8.8.8.8', 80))
+        s.connect(('223.5.5.5', 80))
         # 获取本地IP地址
         ip = s.getsockname()[0]
         s.close()
@@ -36,50 +36,68 @@ def get_nat_type():
         # 如果获取失败，返回错误信息
         return str(e), None, None
 
+def get_ipv6():
+    host_name = socket.gethostname()
+    addresses = socket.getaddrinfo(host_name, None, socket.AF_INET6)
+    ipv6_addresses = [addr[4][0] for addr in addresses]
+    return ipv6_addresses
+
 if __name__ == '__main__':
     # 让用户选择输出语言
-    language = input("请选择输出语言（1.中文/2.English/3.Français/4.Русский/5.Español): ").strip().lower()
+    while True:
+        language = input("请选择输出语言(1.中文/2.English/3.Français/4.Русский/5.Español/q.exit): ").strip().lower()
 
-    # 获取并打印公网IP地址
-    public_ip = get_public_ip()
-    private_ip = get_private_ip()
-    nat_type, external_ip, external_port = get_nat_type()
+        if language == 'q':
+            print("Now you are quitting this process.")
+            print("Thank you!")
+            break
 
-    if language == '1':
-        # 输出中文结果
-        print(f"公网IP地址: {public_ip}")
-        print(f"私网IP地址: {private_ip}")
-        print(f"NAT类型: {nat_type}")
-        print(f"外部IP地址: {external_ip}")
-        print(f"外部端口: {external_port}")
-    elif language == '2':
-        # 输出英文结果
-        print(f"Public IP Address: {public_ip}")
-        print(f"Private IP Address: {private_ip}")
-        print(f"NAT Type: {nat_type}")
-        print(f"External IP Address: {external_ip}")
-        print(f"External Port: {external_port}")
-    elif language == '3':
-        # 输出法文结果
-        print(f"Adresse IP publique : {public_ip}")
-        print(f"Adresse IP privée : {private_ip}")
-        print(f"Type de NAT : {nat_type}")
-        print(f"Adresse IP externe : {external_ip}")
-        print(f"Port externe : {external_port}")
-    elif language == '4':
-        # 输出俄文结果
-        print(f"Публичный IP-адрес: {public_ip}")
-        print(f"Частный IP-адрес: {private_ip}")
-        print(f"Тип NAT: {nat_type}")
-        print(f"Внешний IP-адрес: {external_ip}")
-        print(f"Внешний порт: {external_port}")
-    elif language == '5':
-        # 输出西班牙文结果
-        print(f"Dirección IP pública: {public_ip}")
-        print(f"Dirección IP privada: {private_ip}")
-        print(f"Tipo de NAT: {nat_type}")
-        print(f"Dirección IP externa: {external_ip}")
-        print(f"Puerto externo: {external_port}")
-    else:
-        # 无效的语言选择
-        print("Invalid language selection. Please choose 'zh-cn' or 'en-us'.")
+        # 获取并打印公网IP地址
+        public_ip = get_public_ip()
+        private_ip = get_private_ip()
+        nat_type, external_ip, external_port = get_nat_type()
+        ipv6_addresses = get_ipv6()
+
+        if language == '1':
+            # 输出中文结果
+            print(f"公网ipv4地址: {public_ip}")
+            print(f"私网ipv4地址: {private_ip}")
+            print(f"NAT类型: {nat_type}")
+            print(f"外部ipv4地址: {external_ip}")
+            print(f"外部端口: {external_port}")
+            print(f"ipv6地址: {ipv6_addresses}")
+        elif language == '2':
+            # 输出英文结果
+            print(f"Public ipv4 Address: {public_ip}")
+            print(f"Private ipv4 Address: {private_ip}")
+            print(f"NAT Type: {nat_type}")
+            print(f"External ipv4 Address: {external_ip}")
+            print(f"External Port: {external_port}")
+            print(f"IPv6 Address: {ipv6_addresses}")
+        elif language == '3':
+            # 输出法文结果
+            print(f"Adresse ipv4 publique : {public_ip}")
+            print(f"Adresse ipv4 privée : {private_ip}")
+            print(f"Type de NAT : {nat_type}")
+            print(f"Adresse ipv4 externe : {external_ip}")
+            print(f"Port externe : {external_port}")
+            print(f"Adresse IPv6: {ipv6_addresses}")
+        elif language == '4':
+            # 输出俄文结果
+            print(f"Публичный ipv4-адрес: {public_ip}")
+            print(f"Частный ipv4-адрес: {private_ip}")
+            print(f"Тип NAT: {nat_type}")
+            print(f"Внешний ipv4-адрес: {external_ip}")
+            print(f"Внешний порт: {external_port}")
+            print(f"IPv6 адрес: {ipv6_addresses}")
+        elif language == '5':
+            # 输出西班牙文结果
+            print(f"Dirección ipv4 pública: {public_ip}")
+            print(f"Dirección ipv4 privada: {private_ip}")
+            print(f"Tipo de NAT: {nat_type}")
+            print(f"Dirección ipv4 externa: {external_ip}")
+            print(f"Puerto externo: {external_port}")
+            print(f"Dirección IPv6: {ipv6_addresses}")
+        else:
+            # 无效的语言选择
+            print("Invalid language selection. Please choose the right language.")
